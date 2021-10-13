@@ -13,7 +13,6 @@
     <div class="search">
         <form action="/search" method="get">
             <input type="text" name="q" placeholder="Search" id="search-input">
-            </input>
         </form>
     </div>
 </aside>

@@ -1,5 +1,5 @@
 <footer>
-    <h1>Footer</h1>
+    <p>Copywrite &copy; <?= date("Y"); ?> <a href="https://github.com/theo0165">Theo Sandell</a></p>
 </footer>
 </body>
 
