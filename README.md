@@ -24,3 +24,28 @@ Tested by the following people:
 
 1. Jane Doe
 2. John Doe
+
+# Idea
+
+1. Blog
+    - Database
+        - Blog posts
+        - Post tags/category, post has multible post_category, 1 post_category is linked to 1 category
+            - [example](https://mysql.tutorials24x7.com/blog/guide-to-design-a-database-for-blog-management-in-mysql)
+        - User (?). No login, post linked to one user
+2. Color template generator
+    - Anonymous posting, no login
+    - Likes
+    - Database
+        - Color template posts
+        - Likes. Like is linked to post id
+            - 1 like per ip per post? Alt per session
+            - IP in like table, check ip before liking.
+        - Categories. Pre defined. Post has multible post_category, 1 post_category is linked to 1 category
+            - [example](https://mysql.tutorials24x7.com/blog/guide-to-design-a-database-for-blog-management-in-mysql)
+
+### Design
+
+-   Sidebar with logo, nav
+-   Grid with "posts".
+-   Light/dark theme
