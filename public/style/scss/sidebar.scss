@@ -17,4 +17,27 @@ aside.sidebar {
       }
     }
   }
+
+  .search {
+    form {
+      position: relative;
+
+      #search-input {
+        width: 100%;
+        font-size: 21px;
+        padding: 7px 10px;
+        border-color: black;
+        border-width: 1.5px;
+        border-radius: 10px;
+      }
+
+      i {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
 }

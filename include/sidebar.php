@@ -11,9 +11,9 @@
         </ul>
     </nav>
     <div class="search">
-        <form action="/search" method="get">
+        <form action="/search" method="get" id="search-form">
             <input type="text" name="q" placeholder="Search" id="search-input">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass" onclick="document.getElementById('search-form').submit();"></i>
         </form>
     </div>
 </aside>
