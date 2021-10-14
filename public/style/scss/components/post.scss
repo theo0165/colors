@@ -3,9 +3,11 @@
 
   .post {
     display: inline-block;
+    margin: 10px;
 
     .colors {
       display: flex;
+      cursor: pointer;
       div {
         width: 50px;
         height: 100px;
@@ -20,10 +22,24 @@
       padding-top: 10px;
       .name {
         max-width: 175px;
-        font-weight: 500;
+        font-weight: 700;
+        cursor: pointer;
+        color: var(--light-text-color);
       }
 
       .likes {
+        i {
+          cursor: pointer;
+          transition: color 0.2s linear;
+
+          &:hover {
+            color: #e74c3c;
+          }
+        }
+
+        &.liked i {
+          color: #e74c3c;
+        }
       }
     }
   }

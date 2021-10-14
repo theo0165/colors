@@ -3,6 +3,79 @@
 
 $dbTestData = [
     [
+        "id" => 123,
+        "name" => "Color pallete 1",
+        "colors" => [
+            "#000000",
+            "#ff00ff",
+            "#00ff00",
+            "#ff0000",
+            "#0000ff"
+        ],
+        "likes" => 123
+    ],
+    [
+        "id" => 123,
+        "name" => "Color pallete 1",
+        "colors" => [
+            "#000000",
+            "#ff00ff",
+            "#00ff00",
+            "#ff0000",
+            "#0000ff"
+        ],
+        "likes" => 123
+    ],
+    [
+        "id" => 123,
+        "name" => "Color pallete 1",
+        "colors" => [
+            "#000000",
+            "#ff00ff",
+            "#00ff00",
+            "#ff0000",
+            "#0000ff"
+        ],
+        "likes" => 123
+    ],
+    [
+        "id" => 123,
+        "name" => "Color pallete 1",
+        "colors" => [
+            "#000000",
+            "#ff00ff",
+            "#00ff00",
+            "#ff0000",
+            "#0000ff"
+        ],
+        "likes" => 123
+    ],
+    [
+        "id" => 123,
+        "name" => "Color pallete 1",
+        "colors" => [
+            "#000000",
+            "#ff00ff",
+            "#00ff00",
+            "#ff0000",
+            "#0000ff"
+        ],
+        "likes" => 123
+    ],
+    [
+        "id" => 123,
+        "name" => "Color pallete 1",
+        "colors" => [
+            "#000000",
+            "#ff00ff",
+            "#00ff00",
+            "#ff0000",
+            "#0000ff"
+        ],
+        "likes" => 123
+    ],
+    [
+        "id" => 123,
         "name" => "Color pallete 1",
         "colors" => [
             "#000000",
@@ -23,13 +96,17 @@ $dbTestData = [
         <div class="posts">
             <?php foreach ($dbTestData as $post) : ?>
                 <div class="post">
-                    <div class="colors">
-                        <?php foreach ($post['colors'] as $color) : ?>
-                            <div style="background: <?= $color; ?>"></div>
-                        <?php endforeach; ?>
-                    </div>
+                    <a href="/single?id=<?= $post['id']; ?>">
+                        <div class="colors">
+                            <?php foreach ($post['colors'] as $color) : ?>
+                                <div style="background: <?= $color; ?>"></div>
+                            <?php endforeach; ?>
+                        </div>
+                    </a>
                     <div class="color-meta">
-                        <div class="name"><?= $post['name'] ?></div>
+                        <a href="/single?id=<?= $post['id']; ?>">
+                            <div class="name"><?= $post['name'] ?></div>
+                        </a>
                         <div class="likes">
                             <i class="fa-solid fa-heart"></i>
                             <?= $post['likes'] ?>
