@@ -13,6 +13,7 @@
     <div class="search">
         <form action="/search" method="get">
             <input type="text" name="q" placeholder="Search" id="search-input">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </form>
     </div>
 </aside>
