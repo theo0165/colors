@@ -1,0 +1,30 @@
+.posts {
+  padding: 20px;
+
+  .post {
+    display: inline-block;
+
+    .colors {
+      display: flex;
+      div {
+        width: 50px;
+        height: 100px;
+        display: inline-block;
+      }
+    }
+
+    .color-meta {
+      display: flex;
+      justify-content: space-between;
+      width: 250px;
+      padding-top: 10px;
+      .name {
+        max-width: 175px;
+        font-weight: 500;
+      }
+
+      .likes {
+      }
+    }
+  }
+}
