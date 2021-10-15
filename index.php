@@ -86,7 +86,9 @@ $dbTestData = [
         ],
         "likes" => 123
     ]
-]
+];
+
+var_dump(getPosts($database->getDb()));
 
 ?>
 

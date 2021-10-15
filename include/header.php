@@ -1,5 +1,6 @@
 <?php
-require(dirname(__DIR__) . "/db.php");
+require __DIR__ . "/../functions.php";
+require __DIR__ . "/../db.php";
 ?>
 
 <!DOCTYPE html>
