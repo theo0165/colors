@@ -1,3 +1,7 @@
+<?php
+require(dirname(__DIR__) . "/db.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
