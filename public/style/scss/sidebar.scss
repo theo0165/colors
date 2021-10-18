@@ -5,6 +5,8 @@ aside.sidebar {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  position: fixed;
+  width: 250px;
 
   .menu-list {
     .menu-item {

@@ -34,6 +34,8 @@ function getPosts(PDO $db): array
         $sql = "SELECT * FROM posts ORDER BY RANDOM()";
     }
 
+    $sql .= " LIMIT 100";
+
     $query = $db->prepare($sql);
     $query->execute();
 
