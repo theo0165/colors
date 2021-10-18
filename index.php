@@ -89,7 +89,6 @@ $dbTestData = [
 ];
 
 $posts = getPosts($database->getDb());
-
 ?>
 
 <!-- This container is used to place content in the right column and the sidebar in the left column -->

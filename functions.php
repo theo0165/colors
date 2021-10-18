@@ -26,9 +26,9 @@ function getLikesForPost(PDO $db, int $postId): int
 
 function getPosts(PDO $db): array
 {
-    if (isset($_GET['top'])) {
+    if (isset($_GET['sort']) && $_GET['sort'] === "top") {
         $sql = "SELECT * FROM posts";
-    } else if (isset($_GET['new'])) {
+    } else if (isset($_GET['sort']) && $_GET['sort'] === "new") {
         $sql = "SELECT * FROM posts ORDER BY created_at DESC";
     } else {
         $sql = "SELECT * FROM posts ORDER BY RANDOM()";
