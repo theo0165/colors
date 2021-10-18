@@ -88,7 +88,7 @@ $dbTestData = [
     ]
 ];
 
-var_dump(getPosts($database->getDb()));
+$posts = getPosts($database->getDb());
 
 ?>
 
@@ -96,7 +96,7 @@ var_dump(getPosts($database->getDb()));
 <div class="grid-container">
     <main>
         <div class="posts">
-            <?php foreach ($dbTestData as $post) : ?>
+            <?php foreach ($posts as $post) : ?>
                 <div class="post">
                     <a href="/single?id=<?= $post['id']; ?>">
                         <div class="colors">

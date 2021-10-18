@@ -1,6 +1,8 @@
 <?php
 
-function getColorsForPost($db, $postId)
+declare(strict_types=1);
+
+function getColorsForPost(PDO $db, int $postId): array
 {
     $sql = "SELECT color FROM post_colors WHERE post_id=$postId";
     $query = $db->prepare($sql);
@@ -11,7 +13,18 @@ function getColorsForPost($db, $postId)
     return $result;
 }
 
-function getPosts($db)
+function getLikesForPost(PDO $db, int $postId): int
+{
+    $sql = "SELECT count(post_like.id) as likes FROM post_like WHERE post_like.post_id = $postId";
+    $query = $db->prepare($sql);
+    $query->execute();
+
+    $result = $query->fetchAll(PDO::FETCH_COLUMN, 0);
+
+    return intval($result[0]);
+}
+
+function getPosts(PDO $db): array
 {
     if (isset($_GET['top'])) {
         $sql = "SELECT * FROM posts";
@@ -24,7 +37,14 @@ function getPosts($db)
     $query = $db->prepare($sql);
     $query->execute();
 
-    $result = $query->fetchAll(PDO::FETCH_ASSOC);
+    $result = [];
+
+    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+        $row += ['colors' => getColorsForPost($db, intval($row['id']))];
+        $row += ['likes' => getLikesForPost($db, intval($row['id']))];
+
+        array_push($result, $row);
+    }
 
     return $result;
 }
