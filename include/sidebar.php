@@ -1,6 +1,8 @@
 <aside class="sidebar">
     <div class="logo">
-        <span>LOGO PLACEHOLDER</span>
+        <a href="/">
+            <img src="/public/img/COLORS.svg" alt="COLORS">
+        </a>
     </div>
     <nav class="menu">
         <ul class="menu-list">

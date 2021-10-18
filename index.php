@@ -15,6 +15,7 @@ $pages = [
     "/sort_top" => __DIR__ . "/components/sort_top.php",
     "/sort_new" => __DIR__ . "/components/sort_new.php",
     "/single" => __DIR__ . "/components/single.php",
+    "/search" => __DIR__ . "/components/search.php",
     "404" => __DIR__ . "/components/404.php"
 ];
 

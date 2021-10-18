@@ -40,12 +40,12 @@
           transition: color 0.2s linear;
 
           &:hover {
-            color: #e74c3c;
+            color: var(--like-hover-color);
           }
         }
 
         &.liked i {
-          color: #e74c3c;
+          color: var(--like-hover-color);
         }
       }
     }

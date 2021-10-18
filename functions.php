@@ -51,3 +51,21 @@ function getPosts(PDO $db, $sort = "none"): array
 
     return $result;
 }
+
+function getPost(PDO $db, int $id): array
+{
+    $sql = "SELECT * FROM posts WHERE id=$id";
+    $query = $db->prepare($sql);
+    $query->execute();
+
+    $result = [];
+
+    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+        $row += ['colors' => getColorsForPost($db, intval($row['id']))];
+        $row += ['likes' => getLikesForPost($db, intval($row['id']))];
+
+        $result = $row;
+    }
+
+    return $result;
+}

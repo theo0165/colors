@@ -1,0 +1,71 @@
+.single {
+  .colors {
+    display: flex;
+
+    .color {
+      width: 20%;
+      height: 500px;
+
+      .color-overlay {
+        display: none;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+        transition: all 0.2s linear;
+
+        .color-overlay-hex {
+          text-transform: uppercase;
+          font-weight: 700;
+          padding-bottom: 10px;
+        }
+      }
+
+      &:hover {
+        .color-overlay {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  .meta {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    .right {
+      display: flex;
+      align-items: center;
+      .name {
+        font-weight: 700;
+        font-size: 32px;
+        padding-right: 10px;
+      }
+    }
+
+    .left {
+      .likes {
+        font-size: 32px;
+
+        i {
+          padding-right: 10px;
+          transition: color 0.2s linear;
+          cursor: pointer;
+
+          &:hover {
+            color: var(--like-hover-color);
+          }
+        }
+
+        &.liked i {
+          color: var(--like-hover-color);
+        }
+      }
+    }
+  }
+}
