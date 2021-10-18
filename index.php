@@ -1,121 +1,33 @@
 <?php require __DIR__ . "/include/header.php"; ?>
 <?php
+$uri = $_SERVER['REQUEST_URI'];
 
-$dbTestData = [
-    [
-        "id" => 123,
-        "name" => "Color pallete 1",
-        "colors" => [
-            "#000000",
-            "#ff00ff",
-            "#00ff00",
-            "#ff0000",
-            "#0000ff"
-        ],
-        "likes" => 123
-    ],
-    [
-        "id" => 123,
-        "name" => "Color pallete 1",
-        "colors" => [
-            "#000000",
-            "#ff00ff",
-            "#00ff00",
-            "#ff0000",
-            "#0000ff"
-        ],
-        "likes" => 123
-    ],
-    [
-        "id" => 123,
-        "name" => "Color pallete 1",
-        "colors" => [
-            "#000000",
-            "#ff00ff",
-            "#00ff00",
-            "#ff0000",
-            "#0000ff"
-        ],
-        "likes" => 123
-    ],
-    [
-        "id" => 123,
-        "name" => "Color pallete 1",
-        "colors" => [
-            "#000000",
-            "#ff00ff",
-            "#00ff00",
-            "#ff0000",
-            "#0000ff"
-        ],
-        "likes" => 123
-    ],
-    [
-        "id" => 123,
-        "name" => "Color pallete 1",
-        "colors" => [
-            "#000000",
-            "#ff00ff",
-            "#00ff00",
-            "#ff0000",
-            "#0000ff"
-        ],
-        "likes" => 123
-    ],
-    [
-        "id" => 123,
-        "name" => "Color pallete 1",
-        "colors" => [
-            "#000000",
-            "#ff00ff",
-            "#00ff00",
-            "#ff0000",
-            "#0000ff"
-        ],
-        "likes" => 123
-    ],
-    [
-        "id" => 123,
-        "name" => "Color pallete 1",
-        "colors" => [
-            "#000000",
-            "#ff00ff",
-            "#00ff00",
-            "#ff0000",
-            "#0000ff"
-        ],
-        "likes" => 123
-    ]
+if (strpos($uri, "?") != false) {
+    $uri = substr($uri, 0, strpos($uri, "?"));
+}
+
+$pages = [
+    "/" => __DIR__ . "/gallery.php",
+    "" => __DIR__ . "/gallery.php",
+    "/new" => __DIR__ . "/new.php",
+    "/sort_top" => __DIR__ . "/sort_top.php",
+    "/sort_new" => __DIR__ . "/sort_new.php",
+    "/single" => __DIR__ . "/single.php",
+    "404" => __DIR__ . "/404.php"
 ];
 
-$posts = getPosts($database->getDb());
 ?>
 
 <!-- This container is used to place content in the right column and the sidebar in the left column -->
 <div class="grid-container">
     <main>
-        <div class="posts">
-            <?php foreach ($posts as $post) : ?>
-                <div class="post">
-                    <a href="/single?id=<?= $post['id']; ?>">
-                        <div class="colors">
-                            <?php foreach ($post['colors'] as $color) : ?>
-                                <div style="background: <?= $color; ?>"></div>
-                            <?php endforeach; ?>
-                        </div>
-                    </a>
-                    <div class="color-meta">
-                        <a href="/single?id=<?= $post['id']; ?>">
-                            <div class="name"><?= $post['name'] ?></div>
-                        </a>
-                        <div class="likes">
-                            <i class="fa-solid fa-heart"></i>
-                            <?= $post['likes'] ?>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        </div>
+        <?php
+        if (array_key_exists($uri, $pages)) {
+            require $pages[$uri];
+        } else {
+            require $pages["404"];
+        }
+        ?>
     </main>
 
     <?php require __DIR__ . "/include/footer.php"; ?>
