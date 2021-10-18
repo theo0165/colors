@@ -1,4 +1,3 @@
-<?php $posts = getPosts($database->getDb()); ?>
 <div class="posts">
     <?php foreach ($posts as $post) : ?>
         <div class="post">
