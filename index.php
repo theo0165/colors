@@ -2,10 +2,12 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
 
+// Check if string contains "?".
 if (strpos($uri, "?") != false) {
     $uri = substr($uri, 0, strpos($uri, "?"));
 }
 
+// Page redirects. Key = url, value = file path to require.
 $pages = [
     "/" => __DIR__ . "/gallery.php",
     "" => __DIR__ . "/gallery.php",
@@ -22,6 +24,7 @@ $pages = [
 <div class="grid-container">
     <main>
         <?php
+        // Check if current uri is in $pages array, otherwise display 404.
         if (array_key_exists($uri, $pages)) {
             require $pages[$uri];
         } else {
