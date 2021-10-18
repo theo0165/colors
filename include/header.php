@@ -18,6 +18,7 @@ require __DIR__ . "/../db.php";
     <link rel="stylesheet" href="/public/style/css/common.css">
     <link rel="stylesheet" href="/public/style/css/index.css">
     <link rel="stylesheet" href="/public/style/css/sidebar.css">
+    <link rel="stylesheet" href="/public/style/css/footer.css">
 </head>
 
 <body>
