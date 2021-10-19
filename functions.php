@@ -69,3 +69,19 @@ function getPost(PDO $db, int $id): array
 
     return $result;
 }
+
+function searchPost(PDO $db, string $query): array
+{
+    $query = "%" . $query . "%";
+    $search = $db->prepare("SELECT id FROM posts WHERE name LIKE :query");
+    $search->bindParam(':query', $query, PDO::PARAM_STR); // This SHOULD sanatize input and prevent sql injection
+    $search->execute();
+
+    $result = [];
+
+    while ($row = $search->fetch(PDO::FETCH_ASSOC)) {
+        array_push($result, getPost($db, intval($row['id'])));
+    }
+
+    return $result;
+}
