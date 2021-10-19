@@ -1,9 +1,11 @@
 <?php
 http_response_code(404);
 ?>
-<link rel="stylesheet" href="/public/style/css/404.css">
-<div class="not-found">
+<script>
+    document.body.classList += "not-found";
+</script>
+<div class="not-found-content">
     <span>ಠ_ಠ</span>
     <h1>404 page not found</h1>
-    <a href="/"><button>Go Back</button></a>
+    <a href="/"><button>Go Home</button></a>
 </div>
