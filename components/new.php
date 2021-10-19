@@ -7,21 +7,21 @@ function rand_color()
 }
 ?>
 <div class="new_pallet">
-    <div class="colors">
-        <?php for ($i = 0; $i < 5; $i++) : ?>
-            <?php $color = rand_color(); ?>
-            <div class="color" style="background-color: <?= $color; ?>">
-                <div class="color-overlay">
-                    <input type="text" name="color-<?= $i; ?>" value="<?= $color; ?>" id="">
+    <form action="/new_pallet" method="post">
+        <div class="colors">
+            <?php for ($i = 0; $i < 5; $i++) : ?>
+                <?php $color = rand_color(); ?>
+                <div class="color" style="background-color: <?= $color; ?>">
+                    <div class="color-overlay">
+                        <input type="text" name="color-<?= $i; ?>" value="<?= $color; ?>" id="">
+                    </div>
                 </div>
-            </div>
-        <?php endfor; ?>
-    </div>
-    <div class="pallete-meta">
-        <form action="/new_pallet" method="post">
+            <?php endfor; ?>
+        </div>
+        <div class="pallete-meta">
             <input type="text" name="name" placeholder="Pallete Name" id="" class="name">
             <input type="submit" value="Save" class="submit">
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
 <script src="/public/js/new_pallet.js"></script>
