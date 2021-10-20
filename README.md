@@ -27,13 +27,7 @@ Tested by the following people:
 
 # Idea
 
-1. Blog
-    - Database
-        - Blog posts
-        - Post tags/category, post has multible post_category, 1 post_category is linked to 1 category
-            - [example](https://mysql.tutorials24x7.com/blog/guide-to-design-a-database-for-blog-management-in-mysql)
-        - User (?). No login, post linked to one user
-2. Color template generator
+1. Color template generator
     - Anonymous posting, no login
     - Likes
     - Database
@@ -49,3 +43,11 @@ Tested by the following people:
 -   Sidebar with logo, nav
 -   Grid with "posts".
 -   Light/dark theme
+
+### TODO
+
+-   Mobile omtimization
+-   Sort top
+-   Dark theme
+-   Cookie/ip collection consent
+-   Test on web server
