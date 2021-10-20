@@ -6,8 +6,8 @@ function rand_color()
     return '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
 }
 ?>
-<div class="new_pallet">
-    <form action="/api/post/new_pallet.php" method="post" class="newPalleteForm">
+<div class="new_palette">
+    <form action="/api/post/new_palette.php" method="post" class="newpaletteForm">
         <div class="colors">
             <?php for ($i = 0; $i < 5; $i++) : ?>
                 <?php $color = rand_color(); ?>
@@ -18,10 +18,10 @@ function rand_color()
                 </div>
             <?php endfor; ?>
         </div>
-        <div class="pallete-meta">
-            <input type="text" name="name" maxlength="75" placeholder="Pallete Name" id="" class="name">
+        <div class="palette-meta">
+            <input type="text" name="name" maxlength="75" placeholder="palette Name" id="" class="name">
             <input type="submit" value="Save" class="submit">
         </div>
     </form>
 </div>
-<script src="/public/js/new_pallet.js"></script>
+<script src="/public/js/new_palette.js"></script>

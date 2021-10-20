@@ -7,7 +7,7 @@
     <nav class="menu">
         <ul class="menu-list">
             <li class="menu-item"><a href="/">Home</a></li>
-            <li class="menu-item"><a href="/new">New Pallet</a></li>
+            <li class="menu-item"><a href="/new">New palette</a></li>
             <li class="menu-item"><a href="/sort_top">Top</a></li>
             <li class="menu-item"><a href="/sort_new">New</a></li>
         </ul>
