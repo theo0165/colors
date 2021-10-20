@@ -21,6 +21,7 @@ require __DIR__ . "/../db.php";
     <link rel="stylesheet" href="/public/style/css/footer.css">
     <link rel="stylesheet" href="/public/style/css/new.css">
     <link rel="stylesheet" href="/public/style/css/404.css">
+    <script src="/public/js/loop.js"></script>
 </head>
 
 <body>

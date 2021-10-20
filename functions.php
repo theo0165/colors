@@ -112,3 +112,23 @@ function createPost(PDO $db, string $name, array $colors): void
 
     header("Location: /single?id=" . $id);
 }
+
+function checkIfIpLikedPost(PDO $db, int $postId, string $ip): bool
+{
+    $sql = "SELECT * FROM post_like WHERE post_id = $postId AND ip = '$ip'";
+    $sql = $db->prepare($sql);
+    $sql->execute();
+
+    if ($sql->rowCount() > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function likePost(PDO $db, int $postId, string $ip): void
+{
+    $sql = "INSERT INTO post_like (post_id, ip) VALUES ($postId, '$ip')";
+    $sql = $db->prepare($sql);
+    $sql->execute();
+}
