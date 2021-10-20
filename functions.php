@@ -85,3 +85,30 @@ function searchPost(PDO $db, string $query): array
 
     return $result;
 }
+
+function createPost(PDO $db, string $name, array $colors): void
+{
+    $db->beginTransaction();
+    $nameQuery = "INSERT INTO posts (name) VALUES (:name)";
+    $nameQuery = $db->prepare($nameQuery);
+    $nameQuery->bindParam(":name", $name, PDO::PARAM_STR);
+    $nameQuery->execute();
+
+    $id = $db->lastInsertId();
+
+    if (!empty($id)) {
+        foreach ($colors as $color) {
+            $colorQuery = "INSERT INTO post_colors (color, post_id) VALUES (:color, :postId)";
+            $colorQuery = $db->prepare($colorQuery);
+            $colorQuery->bindParam(":color", $color, PDO::PARAM_STR);
+            $colorQuery->bindParam(":postId", $id, PDO::PARAM_STR);
+            $colorQuery->execute();
+        }
+
+        $db->commit();
+    } else {
+        $db->rollBack();
+    }
+
+    header("Location: /single?id=" . $id);
+}
