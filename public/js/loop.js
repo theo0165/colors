@@ -1,5 +1,6 @@
 function likePost(id) {
   let element = document.querySelector('#post-' + id + ' .color-meta .likes');
+  console.log(element, '#post-' + id + ' .color-meta .likes');
   let likesText = document.querySelector(
     '#post-' + id + ' .color-meta .likes span'
   );

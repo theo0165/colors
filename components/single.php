@@ -11,7 +11,7 @@ if (empty($post)) {
     header("Location: /"); //Redirect home if id is invalid
 }
 ?>
-<div class="single">
+<div class="single" id="post-<?= $_GET['id']; ?>">
     <div class="colors">
         <?php foreach ($post['colors'] as $color) : ?>
             <div class="color" style="background-color:<?= $color ?>">
@@ -22,14 +22,19 @@ if (empty($post)) {
             </div>
         <?php endforeach; ?>
     </div>
-    <div class="meta">
+    <div class="color-meta">
         <div class="right">
             <div class="name"><?= $post['name']; ?></div>
             <div class="created_date">Created: <?= date("d F Y", strtotime($post['created_at'])); ?></div>
         </div>
         <div class="left">
-            <div class="likes">
-                <i class="fa-solid fa-heart"></i><?= $post['likes']; ?>
+            <div class="likes<?php echo (checkIfIpLikedPost(
+                                    $database->getDb(),
+                                    $post['id'],
+                                    $_SERVER['REMOTE_ADDR']
+                                )) ? " liked" : ""; ?>" onclick="likePost(<?= $post['id']; ?>)">
+                <i class="fa-solid fa-heart"></i>
+                <span><?= $post['likes'] ?></span>
             </div>
         </div>
     </div>
