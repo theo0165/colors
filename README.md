@@ -51,3 +51,4 @@ Tested by the following people:
 -   Dark theme
 -   Cookie/ip collection consent
 -   Test on web server
+-   Fix API route in htaccess
