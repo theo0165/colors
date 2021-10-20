@@ -1,4 +1,4 @@
-<img src="https://media.giphy.com/media/lYgsRPkt16EL5U2fvR/giphy-downsized-large.gif" width="100%">
+<img src="https://i.giphy.com/media/lYgsRPkt16EL5U2fvR/giphy-downsized-large.gif" width="100%">
 
 # Project Title
 
