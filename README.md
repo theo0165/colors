@@ -1,4 +1,4 @@
-![](https://media.giphy.com/media/lYgsRPkt16EL5U2fvR/giphy-downsized-large.gif)
+<img src="https://media.giphy.com/media/lYgsRPkt16EL5U2fvR/giphy-downsized-large.gif" width="100%">
 
 # Project Title
 
