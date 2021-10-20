@@ -7,7 +7,7 @@ function rand_color()
 }
 ?>
 <div class="new_palette">
-    <form action="/api/post/new_palette.php" method="post" class="newpaletteForm">
+    <form action="<?= $settings['site_url']; ?>/api/post/new_palette.php" method="post" class="newpaletteForm">
         <div class="colors">
             <?php for ($i = 0; $i < 5; $i++) : ?>
                 <?php $color = rand_color(); ?>
@@ -19,9 +19,9 @@ function rand_color()
             <?php endfor; ?>
         </div>
         <div class="palette-meta">
-            <input type="text" name="name" maxlength="75" placeholder="palette Name" id="" class="name">
+            <input type="text" name="name" maxlength="75" placeholder="Palette Name" id="" class="name">
             <input type="submit" value="Save" class="submit">
         </div>
     </form>
 </div>
-<script src="/public/js/new_palette.js"></script>
+<script src="<?= $settings['site_url']; ?>/public/js/new_palette.js"></script>

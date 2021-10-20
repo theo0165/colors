@@ -1,9 +1,10 @@
 <?php
 require __DIR__ . '/../../db.php';
 require __DIR__ . '/../../functions.php';
+require __DIR__ . '/../../settings.php';
 
 if ($_SERVER['REQUEST_METHOD'] != "POST") {
-    header("Location: /");
+    header("Location: " . $settings['site_url'] . "/");
 }
 
 if (
@@ -14,7 +15,7 @@ if (
     !isset($_POST['color-4']) ||
     !isset($_POST['name'])
 ) {
-    header("Location: /");
+    header("Location: " . $settings['site_url'] . "/");
 }
 
 if (
@@ -25,7 +26,7 @@ if (
     empty($_POST['color-4']) ||
     empty($_POST['name'])
 ) {
-    header("Location: /");
+    header("Location: " . $settings['site_url'] . "/");
 }
 
 $colors = [];
@@ -35,14 +36,14 @@ for ($i = 0; $i < 5; $i++) {
     $regex = '/^([#][0-9a-zA-Z]{6})$/';
 
     if (preg_match($regex, $colorValue) != 1) { //Regex checks for hex code
-        header("Location: /");
+        header("Location: " . $settings['site_url'] . "/");
     }
 
     array_push($colors, $_POST['color-' . $i]);
 }
 
 if (strlen($_POST['name']) > 75) {
-    header("Location: /");
+    header("Location: " . $settings['site_url'] . "/");
 }
 
 // ALL CHECKS PASSED

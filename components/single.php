@@ -2,13 +2,13 @@
 //TODO: Fix copy to clipboard
 
 if (!isset($_GET['id']) || $_GET['id'] == "") {
-    header("Location: /"); //Redirect home if id parameter is not set or empty.
+    header("Location: " . $settings['site_url'] . "/"); //Redirect home if id parameter is not set or empty.
 }
 
 $post = getPost($database->getDb(), intval($_GET['id']));
 
 if (empty($post)) {
-    header("Location: /"); //Redirect home if id is invalid
+    header("Location: " . $settings['site_url'] . "/"); //Redirect home if id is invalid
 }
 ?>
 <div class="single" id="post-<?= $_GET['id']; ?>">

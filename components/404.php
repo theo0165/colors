@@ -7,5 +7,5 @@ http_response_code(404);
 <div class="not-found-content">
     <span>ಠ_ಠ</span>
     <h1>404 page not found</h1>
-    <a href="/"><button>Go Home</button></a>
+    <a href="<?= $settings['site_url']; ?>/"><button>Go Home</button></a>
 </div>

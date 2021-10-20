@@ -1,7 +1,7 @@
 <div class="posts">
     <?php foreach ($posts as $post) : ?>
         <div class="post" id="post-<?= $post['id']; ?>">
-            <a href="/single?id=<?= $post['id']; ?>">
+            <a href="<?= $settings['site_url']; ?>/single?id=<?= $post['id']; ?>">
                 <div class="colors">
                     <?php foreach ($post['colors'] as $color) : ?>
                         <div style="background: <?= $color; ?>"></div>
@@ -9,7 +9,7 @@
                 </div>
             </a>
             <div class="color-meta">
-                <a href="/single?id=<?= $post['id']; ?>">
+                <a href="<?= $settings['site_url']; ?>/single?id=<?= $post['id']; ?>">
                     <div class="name"><?= $post['name'] ?></div>
                 </a>
                 <div class="likes<?php echo (checkIfIpLikedPost(

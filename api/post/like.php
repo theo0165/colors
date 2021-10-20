@@ -2,9 +2,10 @@
 
 require __DIR__ . '/../../db.php';
 require __DIR__ . '/../../functions.php';
+require __DIR__ . '/../../settings.php';
 
 if ($_SERVER['REQUEST_METHOD'] != "POST") {
-    header("Location: /");
+    header("Location: " . $settings['site_url'] . "/");
 }
 
 if (!isset($_POST['id']) || empty($_POST['id'])) {

@@ -9,7 +9,7 @@ function likePost(id) {
     let formData = new FormData();
     formData.append('id', id);
 
-    fetch('/api/post/like.php', {
+    fetch(settings.site_url + '/api/post/like.php', {
       method: 'POST',
       body: formData,
     })

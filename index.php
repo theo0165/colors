@@ -9,13 +9,13 @@ if (strpos($uri, "?") != false) {
 
 // Page redirects. Key = url, value = file path to require.
 $pages = [
-    "/" => __DIR__ . "/components/gallery.php",
-    "" => __DIR__ . "/components/gallery.php",
-    "/new" => __DIR__ . "/components/new.php",
-    "/sort_top" => __DIR__ . "/components/sort_top.php",
-    "/sort_new" => __DIR__ . "/components/sort_new.php",
-    "/single" => __DIR__ . "/components/single.php",
-    "/search" => __DIR__ . "/components/search.php",
+    $settings['site_url'] . "/" => __DIR__ . "/components/gallery.php",
+    $settings['site_url'] . "" => __DIR__ . "/components/gallery.php",
+    $settings['site_url'] . "/new" => __DIR__ . "/components/new.php",
+    $settings['site_url'] . "/sort_top" => __DIR__ . "/components/sort_top.php",
+    $settings['site_url'] . "/sort_new" => __DIR__ . "/components/sort_new.php",
+    $settings['site_url'] . "/single" => __DIR__ . "/components/single.php",
+    $settings['site_url'] . "/search" => __DIR__ . "/components/search.php",
     "404" => __DIR__ . "/components/404.php"
 ];
 
