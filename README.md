@@ -1,6 +1,6 @@
 ![](https://i.giphy.com/media/3o7aD56B2QS5MyTGfe/giphy.webp)
 
-# Project Title
+# C O L O R S
 
 Text about the project and why it exists. This would also be a great place to link the project on One.com.
 
