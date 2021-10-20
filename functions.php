@@ -119,7 +119,7 @@ function checkIfIpLikedPost(PDO $db, int $postId, string $ip): bool
     $sql = $db->prepare($sql);
     $sql->execute();
 
-    if ($sql->rowCount() > 0) {
+    if (count($sql->fetchAll()) > 0) {
         return true;
     } else {
         return false;

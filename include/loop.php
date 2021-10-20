@@ -12,15 +12,15 @@
                 <a href="/single?id=<?= $post['id']; ?>">
                     <div class="name"><?= $post['name'] ?></div>
                 </a>
-                <?php if (checkIfIpLikedPost($database->getDb(), $post['id'], $_SERVER['REMOTE_ADDR']) === true) : ?>
-                    <div class="likes liked" onclick="likePost(<?= $post['id']; ?>)">
-                    <?php else : ?>
-                        <div class="likes" onclick="likePost(<?= $post['id']; ?>)">
-                        <?php endif; ?>
-                        <i class="fa-solid fa-heart"></i>
-                        <span><?= $post['likes'] ?></span>
-                        </div>
-                    </div>
+                <div class="likes<?php echo (checkIfIpLikedPost(
+                                        $database->getDb(),
+                                        $post['id'],
+                                        $_SERVER['REMOTE_ADDR']
+                                    )) ? " liked" : ""; ?>" onclick="likePost(<?= $post['id']; ?>)">
+                    <i class="fa-solid fa-heart"></i>
+                    <span><?= $post['likes'] ?></span>
+                </div>
             </div>
-        <?php endforeach; ?>
         </div>
+    <?php endforeach; ?>
+</div>
