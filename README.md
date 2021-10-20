@@ -1,4 +1,4 @@
-INSERT MANDATORY GIF
+![](https://media.giphy.com/media/lYgsRPkt16EL5U2fvR/giphy-downsized-large.gif)
 
 # Project Title
 
