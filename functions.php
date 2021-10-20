@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require __DIR__ . "/settings.php";
+
 function getColorsForPost(PDO $db, int $postId): array
 {
     $sql = "SELECT color FROM post_colors WHERE post_id=$postId";
@@ -86,7 +88,7 @@ function searchPost(PDO $db, string $query): array
     return $result;
 }
 
-function createPost(PDO $db, string $name, array $colors): void
+function createPost(PDO $db, string $name, array $colors, $settings): void //Why oh why do i need $settings when settings is always required before this file :/
 {
     $db->beginTransaction();
     $nameQuery = "INSERT INTO posts (name) VALUES (:name)";
@@ -110,7 +112,7 @@ function createPost(PDO $db, string $name, array $colors): void
         $db->rollBack();
     }
 
-    header("Location: /single?id=" . $id);
+    header("Location: " . $settings['site_url'] . "/single?id=" . $id);
 }
 
 function checkIfIpLikedPost(PDO $db, int $postId, string $ip): bool

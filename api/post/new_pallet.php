@@ -1,7 +1,7 @@
 <?php
+require __DIR__ . '/../../settings.php';
 require __DIR__ . '/../../db.php';
 require __DIR__ . '/../../functions.php';
-require __DIR__ . '/../../settings.php';
 
 if ($_SERVER['REQUEST_METHOD'] != "POST") {
     header("Location: " . $settings['site_url'] . "/");
@@ -48,4 +48,4 @@ if (strlen($_POST['name']) > 75) {
 
 // ALL CHECKS PASSED
 
-createPost($database->getDb(), $_POST['name'], $colors);
+createPost($database->getDb(), $_POST['name'], $colors, $settings);

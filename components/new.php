@@ -7,7 +7,7 @@ function rand_color()
 }
 ?>
 <div class="new_palette">
-    <form action="<?= $settings['site_url']; ?>/api/post/new_palette.php" method="post" class="newpaletteForm">
+    <form action="<?= $settings['site_url']; ?>/api/post/new_pallet.php" method="post" class="newpaletteForm">
         <div class="colors">
             <?php for ($i = 0; $i < 5; $i++) : ?>
                 <?php $color = rand_color(); ?>

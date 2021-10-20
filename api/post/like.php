@@ -1,8 +1,8 @@
 <?php
 
+require __DIR__ . '/../../settings.php';
 require __DIR__ . '/../../db.php';
 require __DIR__ . '/../../functions.php';
-require __DIR__ . '/../../settings.php';
 
 if ($_SERVER['REQUEST_METHOD'] != "POST") {
     header("Location: " . $settings['site_url'] . "/");
