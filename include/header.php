@@ -28,9 +28,9 @@ require __DIR__ . "/../db.php";
             <?php foreach ($settings as $key => $setting) : ?>
                 <?php
                 if ($key = array_key_last($settings)) {
-                    echo $key . ':"$setting"';
+                    echo $key . ':"' . $setting . '"';
                 } else {
-                    echo $key . ':"$settings",';
+                    echo $key . ':"' . $setting . '",';
                 } ?>
             <?php endforeach; ?>
         } // This error can't be fixed...

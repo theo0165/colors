@@ -1,5 +1,5 @@
 <?php
 
 $settings = [
-    "site_url" => "/colors" // Blank for local
+    "site_url" => "" // Blank for local
 ];
