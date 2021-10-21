@@ -56,7 +56,7 @@ function getPostsSortTop(PDO $db)
 {
     $posts = getPosts($db);
     usort($posts, function ($a, $b) {
-        return $b['likes'] <=> $a['likes'];
+        return $b['likes'] <=> $a['likes']; //Sort by most likes.
     });
 
     return $posts;
