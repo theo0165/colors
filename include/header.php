@@ -22,6 +22,7 @@ require __DIR__ . "/../db.php";
     <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/footer.css">
     <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/new.css">
     <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/404.css">
+    <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/components/cookie.css">
     <script src="<?= $settings['site_url']; ?>/public/js/loop.js"></script>
     <script>
         let settings = {

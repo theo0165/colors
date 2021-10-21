@@ -1,0 +1,29 @@
+div.cookie-consent.accepted {
+  display: none;
+}
+
+.cookie-consent {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background: var(--cookie-box-background);
+  color: white;
+  align-items: center;
+
+  span {
+  }
+
+  #cookie-accept {
+    padding: 7px 15px;
+    background: transparent;
+    font-weight: 700;
+    font-size: 17px;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+  }
+}
