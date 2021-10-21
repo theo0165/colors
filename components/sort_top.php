@@ -1,3 +1,3 @@
 <?php
-$posts = getPosts($database->getDb(), "top");
+$posts = getPostsSortTop($database->getDb());
 require __DIR__ . "/../include/loop.php";

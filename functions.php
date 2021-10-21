@@ -29,9 +29,7 @@ function getLikesForPost(PDO $db, int $postId): int
 function getPosts(PDO $db, $sort = "none"): array
 {
     //TODO: Implement top sorting. Sort by number of likes
-    if ($sort === "top") {
-        $sql = "SELECT * FROM posts";
-    } else if ($sort === "new") {
+    if ($sort === "new") {
         $sql = "SELECT * FROM posts ORDER BY created_at DESC";
     } else {
         $sql = "SELECT * FROM posts ORDER BY RANDOM()";
@@ -52,6 +50,16 @@ function getPosts(PDO $db, $sort = "none"): array
     }
 
     return $result;
+}
+
+function getPostsSortTop(PDO $db)
+{
+    $posts = getPosts($db);
+    usort($posts, function ($a, $b) {
+        return $b['likes'] <=> $a['likes'];
+    });
+
+    return $posts;
 }
 
 function getPost(PDO $db, int $id): array

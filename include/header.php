@@ -33,7 +33,7 @@ require __DIR__ . "/../db.php";
                     echo $key . ':"' . $setting . '",';
                 } ?>
             <?php endforeach; ?>
-        } // This error can't be fixed...
+        }; // This error can't be fixed...
     </script>
 </head>
 
