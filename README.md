@@ -53,5 +53,5 @@ Tested by the following people:
 -   [ ] Test on web server
 -   [x] Fix API route in htaccess
 -   [ ] Fix html validation error, see [here](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&checkerrorpages=yes&useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Ftheosandell.com%2Fcolors%2F)
--   [ ] Validate form input on create new in browser.
--   [ ] Fix copy to clipboard on single
+-   [x] Validate form input on create new in browser.
+-   [x] Fix copy to clipboard on single

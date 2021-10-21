@@ -16,7 +16,7 @@ if (empty($post)) {
         <?php foreach ($post['colors'] as $color) : ?>
             <div class="color" style="background-color:<?= $color ?>">
                 <div class="color-overlay">
-                    <p class="color-overlay-hex"><?= $color; ?></p>
+                    <input readonly class="color-overlay-hex" value="<?= strtoupper($color); ?>"></input>
                     <p>Click to copy</p>
                 </div>
             </div>
