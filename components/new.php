@@ -19,7 +19,7 @@ function rand_color()
             <?php endfor; ?>
         </div>
         <div class="palette-meta">
-            <input type="text" name="name" maxlength="75" placeholder="Palette Name" id="" class="name">
+            <input type="text" required name="name" maxlength="75" placeholder="Palette Name" id="" class="name">
             <input type="submit" value="Save" class="submit">
         </div>
     </form>
