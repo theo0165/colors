@@ -24,4 +24,4 @@ function rand_color()
         </div>
     </form>
 </div>
-<script src="<?= $settings['site_url']; ?>/public/js/new_palette.js"></script>
+<script src="<?= $settings['site_url']; ?>/public/js/new_pallet.js"></script>
