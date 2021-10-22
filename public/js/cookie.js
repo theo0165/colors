@@ -31,3 +31,28 @@ cookieButton.addEventListener('click', () => {
 
   setCookie('cookieAccepted', true, 365);
 });
+
+let darkThemeSwitcher = document.querySelector('.theme-switcher .dark-button');
+let lightThemeSwitcher = document.querySelector(
+  '.theme-switcher .light-button'
+);
+
+darkThemeSwitcher.addEventListener('click', function () {
+  console.log('Dark click');
+  if (!document.body.classList.contains('dark-theme')) {
+    document.body.classList.add('dark-theme');
+    document.body.classList.remove('light-theme');
+  }
+
+  setCookie('theme', 'dark', 365);
+});
+
+lightThemeSwitcher.addEventListener('click', function () {
+  console.log('Light click');
+  if (!document.body.classList.contains('light-theme')) {
+    document.body.classList.add('light-theme');
+    document.body.classList.remove('dark-theme');
+  }
+
+  setCookie('theme', 'light', 365);
+});

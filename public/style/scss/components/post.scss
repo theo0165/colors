@@ -31,13 +31,14 @@
         max-width: 175px;
         font-weight: 700;
         cursor: pointer;
-        color: var(--light-text-color);
+        color: var(--text-color);
       }
 
       .likes {
         i {
           cursor: pointer;
           transition: color 0.2s linear;
+          color: var(--text-color);
 
           &:hover {
             color: var(--like-hover-color);
@@ -46,6 +47,10 @@
 
         &.liked i {
           color: var(--like-hover-color);
+        }
+
+        span {
+          color: var(--text-color);
         }
       }
     }

@@ -41,8 +41,19 @@ require __DIR__ . "/../db.php";
         }; // This error can't be fixed...
     </script>
 </head>
+<?php
+$theme = "light-theme";
 
-<body>
+if (isset($_COOKIE['theme']) && !empty($_COOKIE['theme'])) {
+    if ($_COOKIE['theme'] === "light") {
+        $theme = "light-theme";
+    } else if ($_COOKIE['theme'] === "dark") {
+        $theme = "dark-theme";
+    }
+}
+?>
+
+<body class="<?= $theme; ?>">
     <?php require __DIR__ . '/sidebar.php' ?>
     <div class="mobile-menu">
         <div class="logo">

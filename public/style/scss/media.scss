@@ -65,7 +65,32 @@
       }
     }
   }
+
+  .single .colors .color .color-overlay {
+    display: flex;
+    background: transparent;
+
+    input {
+      font-size: 14px !important;
+    }
+
+    p {
+      display: none;
+    }
+  }
 }
 
-// MOBILE START
-//@media screen and (max-width: 640px) {}
+@media screen and (max-width: 800px) {
+  .single .colors .color .color-overlay {
+    display: flex;
+    background: transparent;
+
+    input {
+      font-size: 14px !important;
+    }
+
+    p {
+      display: none;
+    }
+  }
+}

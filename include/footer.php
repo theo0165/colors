@@ -5,6 +5,10 @@
     <div class="icons">
         <a href="https://github.com/theo0165"><i class="fa-brands fa-github"></i></a>
         <a href="https://github.com/theo0165/the-elephpant-in-the-room"><i class="fa-solid fa-code-fork"></i></a>
+        <div class="theme-switcher">
+            <i class="dark-button fa-solid fa-moon"></i>
+            <i class="light-button fa-solid fa-sun"></i>
+        </div>
     </div>
 </footer>
 <?php

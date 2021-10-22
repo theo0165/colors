@@ -5,7 +5,7 @@ footer {
   padding: 20px;
 
   a {
-    color: var(--light-text-color);
+    color: var(--text-color);
   }
 
   i {
@@ -14,12 +14,47 @@ footer {
 
   p {
     display: inline-block;
+    color: var(--text-color);
   }
 
   .icons {
     padding-top: 10px;
-    a {
+    a,
+    div {
       padding: 0 10px;
     }
+  }
+
+  .theme-switcher {
+    display: inline-block;
+
+    i {
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .light-button {
+      display: none;
+    }
+  }
+}
+
+.light-theme {
+  .theme-switcher .dark-button {
+    display: inline-block;
+  }
+
+  .theme-switcher .light-button {
+    display: none;
+  }
+}
+
+.dark-theme {
+  .theme-switcher .light-button {
+    display: inline-block;
+  }
+
+  .theme-switcher .dark-button {
+    display: none;
   }
 }
