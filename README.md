@@ -76,7 +76,7 @@ Tested by the following people:
 -   [x] Sort top
 -   [x] Dark theme
 -   [x] Cookie/ip collection consent
--   [ ] Test on web server
+-   [x] Test on web server
 -   [x] Fix API route in htaccess
 -   [ ] Fix html validation error, see [here](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&checkerrorpages=yes&useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Ftheosandell.com%2Fcolors%2F)
 -   [x] Validate form input on create new in browser.
