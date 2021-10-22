@@ -48,7 +48,7 @@ Tested by the following people:
 
 -   [x] Mobile optimization
 -   [x] Sort top
--   [ ] Dark theme
+-   [x] Dark theme
 -   [x] Cookie/ip collection consent
 -   [ ] Test on web server
 -   [x] Fix API route in htaccess
