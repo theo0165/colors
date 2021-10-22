@@ -46,7 +46,7 @@ Tested by the following people:
 
 ### TODO
 
--   [ ] Mobile optimization
+-   [x] Mobile optimization
 -   [x] Sort top
 -   [ ] Dark theme
 -   [x] Cookie/ip collection consent

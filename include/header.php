@@ -23,8 +23,11 @@ require __DIR__ . "/../db.php";
     <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/new.css">
     <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/404.css">
     <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/components/cookie.css">
+    <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/media.css">
+    <link rel="stylesheet" href="<?= $settings['site_url']; ?>/public/style/css/mobile-nav.css">
     <script src="<?= $settings['site_url']; ?>/public/js/single.js"></script>
     <script src="<?= $settings['site_url']; ?>/public/js/loop.js"></script>
+    <script src="<?= $settings['site_url']; ?>/public/js/mobile-menu.js"></script>
     <script>
         let settings = {
             <?php foreach ($settings as $key => $setting) : ?>
@@ -41,3 +44,24 @@ require __DIR__ . "/../db.php";
 
 <body>
     <?php require __DIR__ . '/sidebar.php' ?>
+    <div class="mobile-menu">
+        <div class="logo">
+            <a href="<?= $settings['site_url']; ?>/">
+                <img src="<?= $settings['site_url']; ?>/public/img/COLORS.svg" alt="COLORS">
+            </a>
+        </div>
+        <div class="right">
+            <nav class="menu">
+                <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="<?= $settings['site_url']; ?>/">Home</a></li>
+                    <li class="menu-item"><a href="<?= $settings['site_url']; ?>/new">New palette</a></li>
+                    <li class="menu-item"><a href="<?= $settings['site_url']; ?>/sort_top">Top</a></li>
+                    <li class="menu-item"><a href="<?= $settings['site_url']; ?>/sort_new">New</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </div>
