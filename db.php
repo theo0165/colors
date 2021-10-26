@@ -1,8 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 class Database
 {
-    private $db;
+    private PDO $db;
 
     function __construct()
     {
@@ -15,7 +17,7 @@ class Database
         }
     }
 
-    function getDb()
+    function getDb(): PDO
     {
         return $this->db;
     }
