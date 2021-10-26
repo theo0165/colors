@@ -78,6 +78,10 @@
       display: none;
     }
   }
+
+  .new_palette form .palette-meta .name-container {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 800px) {

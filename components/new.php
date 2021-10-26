@@ -13,13 +13,17 @@ function rand_color()
                 <?php $color = rand_color(); ?>
                 <div class="color" style="background-color: <?= $color; ?>">
                     <div class="color-overlay">
+                        <label for="color-<?= $i; ?>">Color <?= $i + 1; ?>, click to change:</label>
                         <input type="text" name="color-<?= $i; ?>" value="<?= $color; ?>" id="">
                     </div>
                 </div>
             <?php endfor; ?>
         </div>
         <div class="palette-meta">
-            <input type="text" required name="name" maxlength="75" placeholder="Palette Name" id="" class="name">
+            <div class="name-container">
+                <label for="name">Palette Name:</label>
+                <input type="text" required name="name" maxlength="75" id="" class="name">
+            </div>
             <input type="submit" value="Save" class="submit">
         </div>
     </form>

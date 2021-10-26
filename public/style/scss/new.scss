@@ -17,6 +17,14 @@
           display: none;
           justify-content: center;
           align-items: center;
+          flex-direction: column;
+          padding: 10px;
+
+          label {
+            text-align: center;
+            color: white;
+            padding-bottom: 7px;
+          }
 
           input {
             border: none;
@@ -26,10 +34,8 @@
             text-align: center;
             color: white;
             text-transform: uppercase;
-
-            &:focus {
-              outline: none;
-            }
+            font-size: 16px;
+            font-weight: 700;
           }
         }
       }
@@ -40,21 +46,32 @@
       justify-content: space-between;
       padding: 15px 20px;
 
-      .name {
-        font-size: 24px;
-        font-weight: 700;
-        border: none;
-        border-bottom: 1px solid var(--border-color);
-        background-color: var(--background-color);
-        color: var(--text-color);
-        width: 180px;
+      .name-container {
+        display: flex;
+        align-items: center;
 
-        &::placeholder {
-          color: var(--text-color);
+        label {
+          padding-right: 10px;
+          font-size: 21px;
+          font-weight: 700;
         }
 
-        &::-ms-input-placeholder {
+        .name {
+          font-size: 24px;
+          font-weight: 700;
+          border: none;
+          border: 1px solid var(--border-color);
+          background-color: var(--background-color);
           color: var(--text-color);
+          width: 180px;
+
+          &::placeholder {
+            color: var(--text-color);
+          }
+
+          &::-ms-input-placeholder {
+            color: var(--text-color);
+          }
         }
       }
 
