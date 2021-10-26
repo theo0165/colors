@@ -10,28 +10,28 @@ Step 1-6 is done in the terminal.
 
 1. Clone this repository
     - ```bash
-        git clone https://github.com/theo0165/the-elephpant-in-the-room
-        cd ./the-elephphant-in-the-room
+      git clone https://github.com/theo0165/the-elephpant-in-the-room
+      cd ./the-elephphant-in-the-room
       ```
 2. Install node.js
     - ```bash
-        brew install node
+      brew install node
       ```
 3. Install sass globally
     - ```bash
-        npm install -g sass
+      npm install -g sass
       ```
 4. Create css directory
     - ```bash
-        mkdir ./public/style/css
+      mkdir ./public/style/css
       ```
 5. Compile scss to css
     - ```bash
-        sass --no-source-map public/style/scss:public/style/css
+      sass --no-source-map public/style/scss:public/style/css
       ```
 6. Start php server
     - ```bash
-        php -S localhost:8000
+      php -S localhost:8000
       ```
 7. Navigate to the website: [http://localhost:8000](http://localhost:8000)
 8. Congrats, you have successfully set up the site. If the website does not work please make sure the website is started in the root directory of the repository.
