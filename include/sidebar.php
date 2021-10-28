@@ -8,8 +8,8 @@
         <ul class="menu-list">
             <li class="menu-item"><a href="<?= $settings['site_url']; ?>/">Home</a></li>
             <li class="menu-item"><a href="<?= $settings['site_url']; ?>/new">New palette</a></li>
-            <li class="menu-item"><a href="<?= $settings['site_url']; ?>/sort_top">Top</a></li>
-            <li class="menu-item"><a href="<?= $settings['site_url']; ?>/sort_new">New</a></li>
+            <li class="menu-item"><a href="<?= $settings['site_url']; ?>/sort_top">Top posts</a></li>
+            <li class="menu-item"><a href="<?= $settings['site_url']; ?>/sort_new">New posts</a></li>
         </ul>
     </nav>
     <div class="search">
