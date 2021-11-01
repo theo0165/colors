@@ -1,8 +1,6 @@
 let cookieBox = document.querySelector('.cookie-consent');
 let cookieButton = document.querySelector('#cookie-accept');
 
-console.log(cookieBox);
-
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
@@ -37,8 +35,8 @@ let lightThemeSwitcher = document.querySelector(
   '.theme-switcher .light-button'
 );
 
+//Set theme to dark if current theme is light
 darkThemeSwitcher.addEventListener('click', function () {
-  console.log('Dark click');
   if (!document.body.classList.contains('dark-theme')) {
     document.body.classList.add('dark-theme');
     document.body.classList.remove('light-theme');
@@ -47,8 +45,8 @@ darkThemeSwitcher.addEventListener('click', function () {
   setCookie('theme', 'dark', 365);
 });
 
+//Set theme to light if current theme is dark
 lightThemeSwitcher.addEventListener('click', function () {
-  console.log('Light click');
   if (!document.body.classList.contains('light-theme')) {
     document.body.classList.add('light-theme');
     document.body.classList.remove('dark-theme');
