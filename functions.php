@@ -142,3 +142,16 @@ function likePost(PDO $db, int $postId, string $ip): void
     $sql = $db->prepare($sql);
     $sql->execute();
 }
+
+function sanitize(string $string): string
+{
+    $string = filter_var($string, FILTER_SANITIZE_STRING);
+
+    if ($string === false) {
+        return "";
+    }
+
+    $string = htmlspecialchars($string);
+
+    return $string;
+}

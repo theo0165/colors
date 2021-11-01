@@ -4,13 +4,13 @@
             <a href="<?= $settings['site_url']; ?>/single?id=<?= $post['id']; ?>">
                 <div class="colors">
                     <?php foreach ($post['colors'] as $color) : ?>
-                        <div style="background: <?= $color; ?>"></div>
+                        <div style="background: <?= sanitize($color); ?>"></div>
                     <?php endforeach; ?>
                 </div>
             </a>
             <div class="color-meta">
                 <a href="<?= $settings['site_url']; ?>/single?id=<?= $post['id']; ?>">
-                    <div class="name"><?= $post['name'] ?></div>
+                    <div class="name"><?= sanitize($post['name']); ?></div>
                 </a>
                 <div class="likes<?php echo (checkIfIpLikedPost(
                                         $database->getDb(),

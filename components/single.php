@@ -16,7 +16,7 @@ if (empty($post)) {
         <?php foreach ($post['colors'] as $color) : ?>
             <div class="color" style="background-color:<?= $color ?>">
                 <div class="color-overlay">
-                    <input readonly class="color-overlay-hex" value="<?= strtoupper($color); ?>"></input>
+                    <input readonly class="color-overlay-hex" value="<?= sanitize(strtoupper($color)); ?>"></input>
                     <p>Click to copy</p>
                 </div>
             </div>
@@ -24,7 +24,7 @@ if (empty($post)) {
     </div>
     <div class="color-meta">
         <div class="right">
-            <div class="name"><?= $post['name']; ?></div>
+            <div class="name"><?= sanitize($post['name']); ?></div>
             <div class="created_date">Created: <?= date("d F Y", strtotime($post['created_at'])); ?></div>
         </div>
         <div class="left">

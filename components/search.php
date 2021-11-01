@@ -1,5 +1,5 @@
 <?php
-$posts = searchPost($database->getDb(), $_GET['q']);
+$posts = searchPost($database->getDb(), sanitize($_GET['q']));
 ?>
 
 <h1 class="search-title"><?= count($posts) ?> results:</h1>
