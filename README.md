@@ -40,11 +40,11 @@ Step 1-6 is done in the terminal.
 
 Code review written by [Sofia Dersén](https://github.com/sdersen).
 
-1. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-2. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-3. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-4. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
-5. `example.js:10-15` - Remember to think about X and this could be refactored using the amazing Y function.
+1. `Overall` - Since the site contains multiple files and a complicated structure there is overall, not enough comments.
+2. `components/new.php:9` - You use both Post and Pallet in regards to the pallets on the page. In database called “posts”.
+3. `public/cookie.js:38-56` - The function would perhaps have been easier to find in a footer or overall-file.
+4. `include/sidebar.php:10-12` - Using both Palette and Post, in sidebar menu.
+5. `include/sidebar.php:15` - Search field missing label.
 
 # Testers
 
