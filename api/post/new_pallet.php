@@ -50,5 +50,4 @@ if (strlen($_POST['name']) > 75) {
 }
 
 // ALL CHECKS PASSED
-
-createPost($database->getDb(), $_POST['name'], $colors, $settings);
+createPost($database->getDb(), trim($_POST['name']), $colors, $settings);

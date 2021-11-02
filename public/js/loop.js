@@ -13,7 +13,7 @@ function likePost(id) {
       body: formData,
     })
       .then((response) => {
-        if (response.status === 200) {
+        if (response.status === 201) {
           element.classList.add('liked');
           likesText.innerHTML = (parseInt(likesText.innerHTML) + 1).toString();
         } else if (response.status === 400 || response.status === 403) {

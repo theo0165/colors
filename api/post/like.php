@@ -17,12 +17,12 @@ if (!isset($_POST['id']) || empty($_POST['id'])) {
 
 // ALL CHECKS PASSED
 
-$postId = $_POST['id'];
+$postId = intval($_POST['id']);
 print_r($_POST);
 $ip = $_SERVER['REMOTE_ADDR'];
 
 if (!checkIfIpLikedPost($database->getDb(), $postId, $ip)) {
-    http_response_code(200);
+    http_response_code(201);
     likePost($database->getDb(), $postId, $ip);
     exit();
 } else {
