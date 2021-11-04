@@ -14,7 +14,7 @@ function rand_color()
                 <div class="color" style="background-color: <?= $color; ?>">
                     <div class="color-overlay">
                         <label for="color-<?= $i; ?>">Color <?= $i + 1; ?>, click to change:</label>
-                        <input type="text" name="color-<?= $i; ?>" value="<?= $color; ?>" id="">
+                        <input type="text" name="colors[]" value="<?= $color; ?>" id="">
                     </div>
                 </div>
             <?php endfor; ?>
